@@ -41,6 +41,24 @@ void pattern3(int n){
     }
 }
 
+void pattern4(int n){
+     for (int i = 1; i <= n ; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if(i+j==n+1){
+                cout<<"*";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+}
+
+
+
 int main() {
     int n;
     cout<<"enterv the value of n "<<endl;
@@ -48,5 +66,6 @@ int main() {
 
     //pattern1(n);
     //pattern2(n);
-    pattern3(n);
+    //pattern3(n);
+    pattern4(n);
 }
