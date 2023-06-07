@@ -66,7 +66,38 @@ void reverse(vector<int>&arr, int si, int ei){
 }
 
 
-
+void addTwoArray(vector<int>&a, vector<int>&b){
+    int n = a.size();
+    int m = b.size();
+    vector<int>ans(max(n,m) + 1 , 0);
+    int i = n-1;
+    int j = m-1;
+    int k = ans.size()-1;
+    int carry = 0;
+    while (k>=0)
+    {
+        int sum = carry;
+        if(i>=0)
+        {
+            sum += a[i];
+            i--;
+        }
+        if (j>=0)
+        {
+            sum += b[j];
+            j--;
+        }
+        ans[k] = sum%10;
+        k--;
+        carry = sum/10;
+        
+    }
+    for (int l = 0; l < ans.size(); l++)
+    {
+        cout<<ans[l]<<" ";
+    }
+    
+}
 
 int main(){
     //int n;
@@ -74,6 +105,7 @@ int main(){
     //cin>>n;
 
     vector<int>arr = {2,3,8,6,1};
+    vector<int>arr1 = {2,3,8,2,2};
     //input(arr);
     display(arr);
 
@@ -89,6 +121,6 @@ int main(){
     //reverse(arr,0,arr.size()-1);
     //display(arr);
 
-
+    addTwoArray(arr,arr1);
     return 0;
 }
