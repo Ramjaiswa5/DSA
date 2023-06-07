@@ -65,6 +65,9 @@ void reverse(vector<int>&arr, int si, int ei){
     }
 }
 
+
+
+
 int main(){
     //int n;
     //cout<<"enter the value of n "<<endl;
@@ -80,8 +83,12 @@ int main(){
     //int data = 7;
     //cout<<findData(arr,data);
 
-    swap(arr,1,4);
-    display(arr);
+    //swap(arr,1,4);
+    //display(arr);
 
-    
+    //reverse(arr,0,arr.size()-1);
+    //display(arr);
+
+
+    return 0;
 }
