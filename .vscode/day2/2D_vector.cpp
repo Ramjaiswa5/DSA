@@ -43,6 +43,19 @@ int minimum(vector<vector<int>>&arr){
     return minEle;
 }
 
+int maximum(vector<vector<int>>&arr){
+    int maxEle = -(int)1e9;
+    for(vector<int>ar:arr)
+    {
+        for (int ele:ar)
+        {
+            maxEle = max(maxEle,ele);
+        }
+        
+    }
+    return maxEle;
+}
+
 int main(){
     int n,m;
     cout<<"enter row and coloum "<<endl;
@@ -52,5 +65,7 @@ int main(){
     input(arr);
     display(arr);
 
-    cout<<minimum(arr);
+    cout<<minimum(arr)<<endl;
+    cout<<maximum(arr)<<endl;
+    
 }
