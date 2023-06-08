@@ -30,6 +30,19 @@ void display(vector<vector<int>>&arr){
     
 }
 
+int minimum(vector<vector<int>>&arr){
+    int minEle = (int)1e9;
+    for(vector<int>ar:arr)
+    {
+        for (int ele:ar)
+        {
+            minEle = min(minEle,ele);
+        }
+        
+    }
+    return minEle;
+}
+
 int main(){
     int n,m;
     cout<<"enter row and coloum "<<endl;
@@ -38,4 +51,6 @@ int main(){
     vector<vector<int>>arr(n,vector<int>(m,0));
     input(arr);
     display(arr);
+
+    cout<<minimum(arr);
 }
