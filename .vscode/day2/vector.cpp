@@ -99,6 +99,22 @@ void addTwoArray(vector<int>&a, vector<int>&b){
     
 }
 
+void subArray(vector<int>&arr){
+    for (int i = 0; i < arr.size(); i++)
+    {
+        for (int j = 0; j < arr.size(); j++)
+        {
+            for (int k = 0; k <= j; k++)
+            {
+                cout<<arr[k]<<" ";
+            }
+            cout<<endl;
+        }
+        cout<<endl;
+    }
+    
+}
+
 int main(){
     //int n;
     //cout<<"enter the value of n "<<endl;
@@ -121,6 +137,9 @@ int main(){
     //reverse(arr,0,arr.size()-1);
     //display(arr);
 
-    addTwoArray(arr,arr1);
+    //addTwoArray(arr,arr1);
+
+    subArray(arr);
+
     return 0;
 }
