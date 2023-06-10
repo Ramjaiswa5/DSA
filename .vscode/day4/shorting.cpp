@@ -41,11 +41,36 @@ void insertionSort(vector<int>&arr){
     }
 }
 
+void bubbleSort(vector<int>&arr){
+    int n = arr.size();
+    for (int i = 1; i < n; i++)
+    {
+        bool isSwaped = false;
+        for (int j = 0; j < n-i; j++)
+        {
+            if (arr[j]>arr[j+1])
+            {
+                swap(arr[j],arr[j+1]);
+                isSwaped = true;
+            }
+            
+        }
+        if (isSwaped == false)
+        {
+            break;
+        }
+        
+        
+    }
+    
+}
+
 int main(){
 
     vector<int>arr ={ 2,4,5,1,9,7};
     //selectionSort(arr);
-    insertionSort(arr);
+    //insertionSort(arr);
+    bubbleSort(arr);
     for(int ele: arr){
         cout<<ele<<" ";
     }
