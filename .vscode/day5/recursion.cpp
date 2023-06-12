@@ -31,10 +31,27 @@ void printDEcInc(int n){
     cout<<n<<endl;
     
 }
+
+void printDEcOddIncEven(int n){
+    //print decreasind odd and increasing even
+    if (n==0)
+    {
+        return;
+    }
+    if(n%2!=0){
+        cout<<n<<endl;
+    }
+    printDEcOddIncEven(n-1);
+    if(n%2==0){
+        cout<<n<<endl;
+    }
+}
+    
 int main(){
 
     //printDecreasing(5);
     //printIncreasing(5);
-    printDEcInc(5);
+    //printDEcInc(5);
+    printDEcOddIncEven(5);
     return 0;
 }
