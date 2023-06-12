@@ -20,9 +20,21 @@ void printIncreasing(int n){
     cout<<n<<endl;
     
 }
+
+void printDEcInc(int n){
+    if (n==0)
+    {
+        return;
+    }
+    cout<<n<<endl;
+    printDEcInc(n-1);
+    cout<<n<<endl;
+    
+}
 int main(){
 
     //printDecreasing(5);
-    printIncreasing(5);
+    //printIncreasing(5);
+    printDEcInc(5);
     return 0;
 }
