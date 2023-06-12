@@ -59,6 +59,17 @@ int factorial(int n){
     return fn;
 
 }
+
+int power(int a, int b){
+    if (b==0)
+    {
+        return 1;
+    }
+    int pb1 = power(a,b-1);
+    int pb=a*pb1;
+
+    return pb;
+}
  
 int main(){
 
@@ -67,5 +78,6 @@ int main(){
     //printDEcInc(5);
     //printDEcOddIncEven(5);
     //cout<<factorial(5);
+    cout<<power(3,3);
     return 0;
 }
