@@ -10,8 +10,19 @@ void printDecreasing(int n){
     printDecreasing(n-1);
     
 }
+
+void printIncreasing(int n){
+    if (n==0)
+    {
+        return;
+    }
+    printIncreasing(n-1);
+    cout<<n<<endl;
+    
+}
 int main(){
 
-    printDecreasing(5);
+    //printDecreasing(5);
+    printIncreasing(5);
     return 0;
 }
