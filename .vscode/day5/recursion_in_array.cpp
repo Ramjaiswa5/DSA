@@ -47,15 +47,32 @@ int find(vector<int>&arr, int idx, int data){
     
 }
 
+int subseq(string ques, string ans){
+
+    if (ques.length()==0)
+    {
+        cout<<ans<<endl;
+        return 1;
+    }
+    int count = 0;
+    count+=subseq(ques.substr(1), ans + ques[0]);
+    count+=subseq(ques.substr(1), ans);
+
+    return count;
+}
+
 int main(){
     
-    vector<int>arr = {1,2,3,4,5,6};
-    display(arr,0);
-    cout<<endl;
-    //cout<<maxEle(arr,0);
-    //cout<<minEle(arr,0);
+    // vector<int>arr = {1,2,3,4,5,6};
+    // display(arr,0);
+    // cout<<endl;
+    // //cout<<maxEle(arr,0);
+    // //cout<<minEle(arr,0);
 
-    cout<<find(arr,0,25);
+    // cout<<find(arr,0,25);
+
+    cout<<subseq("abc", "")<<endl;
 
     return 0;
+
 }
