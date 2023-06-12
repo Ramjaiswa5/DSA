@@ -11,10 +11,34 @@ void display(vector<int>&arr, int idx){
     cout<<arr[idx]<<" ";
     display(arr,idx+1);
 }
+int maxEle(vector<int>&arr, int idx){
+    if (idx == arr.size())
+    {
+        return -(int)1e9;
+    }
+    int recAns = maxEle(arr, idx+1);
+    int finalAns = max(arr[idx],recAns);
+    
+    return finalAns;
+}
+
+int minEle(vector<int>&arr, int idx){
+    if (idx == arr.size())
+    {
+        return (int)1e9;
+    }
+    int recAns = minEle(arr, idx+1);
+    int finalAns = min(arr[idx],recAns);
+    
+    return finalAns;
+}
 
 int main(){
     
     vector<int>arr = {1,2,3,4,5,6};
     display(arr,0);
+    cout<<endl;
+    //cout<<maxEle(arr,0);
+    cout<<minEle(arr,0);
     return 0;
 }
