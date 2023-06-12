@@ -33,12 +33,29 @@ int minEle(vector<int>&arr, int idx){
     return finalAns;
 }
 
+int find(vector<int>&arr, int idx, int data){
+    if (idx == arr.size())
+    {
+        return -1;
+    }
+
+    if (arr[idx]==data)
+    {
+        return idx;
+    }
+    return find(arr,idx+1,data);
+    
+}
+
 int main(){
     
     vector<int>arr = {1,2,3,4,5,6};
     display(arr,0);
     cout<<endl;
     //cout<<maxEle(arr,0);
-    cout<<minEle(arr,0);
+    //cout<<minEle(arr,0);
+
+    cout<<find(arr,0,25);
+
     return 0;
 }
