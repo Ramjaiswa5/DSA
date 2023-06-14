@@ -42,9 +42,39 @@ int permutationWithoutDuplicate(string str, string ans){
     
     return count;
 }
+
+// maze path_HVD(0,0,2,2)
+int mazePath_HVD(int sr, int sc, int er, int ec, string ans){
+    if (sr == er && sc == ec)
+    {
+        cout<<ans<<endl;
+        return 1;
+    }
+    int count=0;
+    // Horizontal Direction
+    if (sc+1 <= er)
+    {
+        count+= mazePath_HVD(sr,sc+1,er,ec, ans+"H");
+    }
+     // Vertical Direction
+    if (sr+1 <= er)
+    {
+        count+= mazePath_HVD(sr+1,sc,er,ec, ans+"V");
+    }
+     // Diagonal Direction
+    if (sc+1 <= ec && sr+1 <= er)
+    {
+        count+= mazePath_HVD(sr+1,sc+1,er,ec, ans+"D");
+    }
+    return count;
+}
+
+
 int main(){
     string str = "aba";
     //cout<<permutation(str,"");
-    cout<<permutationWithoutDuplicate(str,"");
+    //cout<<permutationWithoutDuplicate(str,"");
+    cout<<mazePath_HVD(0,0,2,2,"");
+
     return 0;
 }
